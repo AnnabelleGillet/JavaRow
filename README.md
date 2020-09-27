@@ -6,12 +6,12 @@ To use the library, just get the Rower instance while being connected to a PM5 m
 ```java
 Rower rower = Rower.getInstance();
 ```
-It is then possible to communicate with the PM5 with predefined methods :
+It is then possible to communicate with the PM5 with predefined methods, for example:
 ```java
 rower.getMonitor(); // Get information that can be displayed on the monitor
 rower.setWorkoutTime(Duration.ofMinutes(20)); // Ask the monitor to start a workout of 20 minutes
 ```
-or by manually defining the commands to send to the monitor :
+or by manually defining the commands to send to the monitor:
 ```java
 Command command = new Command();
 command.addCommand(ShortSpecificPMCommand.CSAFE_PM_GET_WORKOUTSTATE);
